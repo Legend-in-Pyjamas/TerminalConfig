@@ -1,0 +1,10 @@
+[opener]
+onlyoffice = [
+    { run = 'flatpak run org.onlyoffice.desktopeditors "$@"', orphan = true, desc = "ONLYOFFICE" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "application/vnd.ms-powerpoint", use = "onlyoffice" },
+    { mime = "application/vnd.openxmlformats-officedocument.presentationml.presentation", use = "onlyoffice" }
+]
